@@ -1,8 +1,8 @@
 <?php
 
-namespace Jeffersongoncalves\Snov\Tests;
+namespace JeffersonGoncalves\Snov\Tests;
 
-use Jeffersongoncalves\Snov\SnovServiceProvider;
+use JeffersonGoncalves\Snov\SnovServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
@@ -12,5 +12,12 @@ class TestCase extends Orchestra
         return [
             SnovServiceProvider::class,
         ];
+    }
+
+    protected function defineEnvironment($app): void
+    {
+        $app['config']->set('snov.client_id', 'fake-client-id');
+        $app['config']->set('snov.client_secret', 'fake-client-secret');
+        $app['config']->set('snov.base_url', 'https://api.snov.io/v1');
     }
 }

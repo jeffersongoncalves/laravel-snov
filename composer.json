@@ -1,22 +1,30 @@
 {
     "name": "jeffersongoncalves/laravel-snov",
-    "description": "A Laravel client for the Snov.io API",
+    "description": "A Laravel client for the Snov.io API — domain search, email finder and verifier, prospects, lists, technology checker, and drip campaigns.",
     "keywords": [
         "laravel",
-        "laravel-snov"
+        "snov",
+        "snovio",
+        "email-finder",
+        "email-verifier",
+        "prospects",
+        "leads",
+        "api",
+        "client"
     ],
     "homepage": "https://github.com/jeffersongoncalves/laravel-snov",
     "license": "MIT",
     "authors": [
         {
-            "name": "Jefferson Simão Gonçalves",
-            "email": "gerson.simao.92@gmail.com"
+            "name": "Jefferson Gonçalves",
+            "email": "jefferson@codions.com",
+            "homepage": "https://github.com/jeffersongoncalves"
         }
     ],
     "require": {
         "php": "^8.2",
-        "spatie/laravel-package-tools": "^1.16",
-        "illuminate/contracts": "^12.0|^13.0"
+        "illuminate/support": "^12.0|^13.0",
+        "spatie/laravel-package-tools": "^1.16"
     },
     "require-dev": {
         "larastan/larastan": "^3.0",
@@ -27,12 +35,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Jeffersongoncalves\\Snov\\": "src/"
+            "JeffersonGoncalves\\Snov\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Jeffersongoncalves\\Snov\\Tests\\": "tests/"
+            "JeffersonGoncalves\\Snov\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -52,10 +60,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Jeffersongoncalves\\Snov\\SnovServiceProvider"
+                "JeffersonGoncalves\\Snov\\SnovServiceProvider"
             ],
             "aliases": {
-                "Snov": "Jeffersongoncalves\\Snov\\Facades\\Snov"
+                "Snov": "JeffersonGoncalves\\Snov\\Facades\\Snov"
             }
         }
     },
